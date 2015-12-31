@@ -1,2 +1,4 @@
-FROM nacyot/cobol-open:apt
-RUN apt-get update -qq && apt-get install apache2
+FROM ubuntu
+RUN apt-get update -qq && apt-get install -y apache2 open-cobol
+RUN mkdir app
+WORKDIR app
