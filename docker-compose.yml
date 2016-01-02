@@ -1,0 +1,6 @@
+app:
+  ports:
+    - "80:80"
+  build: .
+  volumes:
+    - .:/app
