@@ -5,8 +5,10 @@ RUN apt-get update -qq && apt-get install -y apache2 open-cobol
 
 # apache settings
 ADD resources/mime.conf /etc/apache2/mods-enabled/mime.conf
+ADD resources/apache2.conf /etc/apache2/apache2.conf
 ADD resources/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 RUN a2enmod cgi
+RUN a2enmod headers
 RUN /etc/init.d/apache2 restart 
 
 # deploy cgi
