@@ -1,6 +1,6 @@
 app:
+  image: koduki/example-cobol
   ports:
     - "80:80"
-  build: .
   volumes:
     - .:/app
